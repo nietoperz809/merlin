@@ -54,7 +54,7 @@ public class MerlinGame extends JPanel {
             public void run() {
                 paintLeds();
                 LED.toggleBlink();
-                paint();
+                render();
             }
         },10,100);
 
@@ -93,23 +93,28 @@ public class MerlinGame extends JPanel {
                     idx = 13;
                 else if (max(157,x) == min(184,x) && max(599,y) == min(626,y))
                     idx = 14;
-                System.out.println(e.getX()+" -- "+e.getY()+ " == "+idx);
+                if (idx > -1)
+                    clicked (idx);
             }
         });
+    }
 
+    private void clicked (int id)
+    {
+        System.out.println("Click: "+id);
     }
 
     private void prepareGraphic() throws Exception {
         imgMain = ImageIO.read(Objects.requireNonNull(Utils.getResource("face.png")));
         imgLedOn = ImageIO.read(Objects.requireNonNull(Utils.getResource("led_on.png")));
         imgLedOff = ImageIO.read(Objects.requireNonNull(Utils.getResource("led_off.png")));
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        GraphicsDevice gs = ge.getDefaultScreenDevice();
-        GraphicsConfiguration gc = gs.getDefaultConfiguration();
-        offImage = gc.createCompatibleImage(imgMain.getWidth(), imgMain.getHeight(), Transparency.OPAQUE);
-
+        offImage = GraphicsEnvironment.
+                getLocalGraphicsEnvironment().
+                getDefaultScreenDevice().
+                getDefaultConfiguration().
+                createCompatibleImage(imgMain.getWidth(), imgMain.getHeight(), Transparency.OPAQUE);
         offGraphics = offImage.createGraphics();
-        offGraphics.drawImage(imgMain, 0, 0, this);
+        offGraphics.drawImage(imgMain, 0, 0, null);
     }
 
     void paintLeds() {
@@ -123,7 +128,7 @@ public class MerlinGame extends JPanel {
             g.drawImage(offImage, 0, 0, getWidth(), getHeight(), this);
     }
 
-    private void paint() {
+    private void render() {
         paint(getGraphics());
     }
 
