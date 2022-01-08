@@ -131,7 +131,15 @@ public class MerlinGame extends JPanel {
                     idx = 9;
                 else if (max(128,x) == min(165,x) && max(439,y) == min(476,y))
                     idx = 10;
-                //System.out.println(e.getX()+" -- "+e.getY()+ " == "+idx);
+                else if (max(99,x) == min(132,x) && max(545,y) == min(575,y))
+                    idx = 11;
+                else if (max(158,x) == min(191,x) && max(546,y) == min(573,y))
+                    idx = 12;
+                else if (max(105,x) == min(133,x) && max(598,y) == min(626,y))
+                    idx = 13;
+                else if (max(157,x) == min(184,x) && max(599,y) == min(626,y))
+                    idx = 14;
+                System.out.println(e.getX()+" -- "+e.getY()+ " == "+idx);
             }
         });
 
