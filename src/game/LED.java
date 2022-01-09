@@ -27,6 +27,17 @@ class LED {
         state = s;
     }
 
+    public LEDSTATE getState() {
+        return state;
+    }
+
+    public void toggleBlinkState() {
+        if (state == LEDSTATE.BLINK)
+            state = LEDSTATE.OFF;
+        else if (state == LEDSTATE.OFF)
+            state = LEDSTATE.BLINK;
+    }
+
     public static void toggleBlink() {
         blinkflag = !blinkflag;
     }

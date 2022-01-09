@@ -15,7 +15,11 @@ public class MainForm extends JFrame{
     }
 
     public static void main(String[] args) throws Exception {
+//       for(int s = 0; s<100; s++)
+//           System.out.println(Math.random()<0.5);
+
         MainForm frame = new MainForm("Merlin!");
+        frame.setResizable(false);
         frame.setContentPane(frame.mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
