@@ -14,19 +14,15 @@ import static java.lang.Math.max;
 import static java.lang.Math.min;
 
 public class MerlinGame extends JPanel {
-    private final LED[] leds = new LED[11];
-    public BufferedImage imgMain;
-    public BufferedImage imgLedOn;
-    int[][] squareLogic = {
-            {1, 2, 4, 5}, {1, 2, 3}, {2, 3, 5, 6},
-            {1, 4, 7}, {2, 4, 5, 6, 8}, {3, 6, 9},
-            {4, 5, 7, 8}, {7, 8, 9}, {5, 6, 8, 9}
-    };
+    public final LED[] leds = new LED[11];
+    private BufferedImage imgMain;
+    private BufferedImage imgLedOn;
     private BufferedImage imgLedOff;
     private BufferedImage offImage;
     private Graphics offGraphics;
-    private int lastClick = -1;
-    private int currentGame = -1;
+    public int lastClick = -1;
+    public int currentGame = -1;
+    private MagicSquare magicSquare = new MagicSquare(this);
 
     public MerlinGame() throws Exception {
         super();
@@ -109,14 +105,14 @@ public class MerlinGame extends JPanel {
             case 5:
                 if (currentGame == 5) {
                     ClipHandler.play(5);
-                    toggleMSquare(squareLogic[4]);
+                    magicSquare.toggleMSquare(4);
                     return;
                 }
                 if (lastClick == 11) {
                     leds[0].setState(LEDSTATE.OFF);
                     ClipHandler.play(ClipHandler.BEGIN);
                     currentGame = 5;
-                    startMSquare();
+                    magicSquare.startMSquare();
                 }
                 return;
             case 0:
@@ -133,7 +129,7 @@ public class MerlinGame extends JPanel {
                     if (id == 10 || id == 0)
                         return;
                     ClipHandler.play(id);
-                    toggleMSquare(squareLogic[id - 1]);
+                    magicSquare.toggleMSquare(id - 1);
                     return;
                 }
                 if (lastClick == 11) {
@@ -158,37 +154,6 @@ public class MerlinGame extends JPanel {
                 createCompatibleImage(imgMain.getWidth(), imgMain.getHeight(), Transparency.OPAQUE);
         offGraphics = offImage.createGraphics();
         offGraphics.drawImage(imgMain, 0, 0, null);
-    }
-
-    private boolean isMSquare() {
-        for (int s = 1; s < 10; s++) {
-            if (s == 5)
-                continue;
-            if (leds[s].getState() != LEDSTATE.BLINK)
-                return false;
-        }
-        if (leds[5].getState() == LEDSTATE.OFF)
-            return true;
-        return false;
-    }
-
-    private void toggleMSquare(int[] arr) {
-        for (int s : arr)
-            leds[s].toggleBlinkState();
-        if (isMSquare()) {
-            ClipHandler.play(ClipHandler.WIN);
-            currentGame = -1;
-            lastClick = -1;
-        }
-    }
-
-    private void startMSquare() {
-        for (int s = 1; s < 10; s++) {
-            if (Math.random() < 0.5)
-                leds[s].setState(LEDSTATE.OFF);
-            else
-                leds[s].setState(LEDSTATE.BLINK);
-        }
     }
 
     private void allLedsOff() {
