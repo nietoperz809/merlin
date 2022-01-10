@@ -98,6 +98,7 @@ public class MerlinGame extends JPanel {
     }
 
     private void buttonClicked(int id) {
+       // System.out.println("Click: " + id);
         switch (id) {
             case 11:
                 allLedsOff();
@@ -144,7 +145,6 @@ public class MerlinGame extends JPanel {
                 return;
         }
         lastClick = id;
-        System.out.println("Click: " + id);
     }
 
     private void prepareGraphic() throws Exception {
