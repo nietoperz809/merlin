@@ -36,7 +36,7 @@ public class MagicSquare implements Subgame {
             merlinGame.leds[s].toggleBlinkState();
         if (isMSquare()) {
             ClipHandler.play(ClipHandler.WIN);
-            merlinGame.currentGame = -1;
+            merlinGame.currentGame = KEY.NOKEY;
             merlinGame.lastClick = KEY.NOKEY;
         }
     }

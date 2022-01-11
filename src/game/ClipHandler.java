@@ -2,6 +2,7 @@ package game;
 
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.swing.*;
 
 public class ClipHandler {
     private static final Clip[] clips = new Clip[16];   // 4 = fail sound
