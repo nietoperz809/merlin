@@ -5,6 +5,15 @@ import java.io.InputStream;
 
 public class Utils
 {
+    public static void delay(int ms)
+    {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            System.err.println(e);
+        }
+    }
+
     public static InputStream getResource (String name)
     {
         InputStream is = ClassLoader.getSystemResourceAsStream (name);

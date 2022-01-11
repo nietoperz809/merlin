@@ -4,6 +4,8 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
 
+import static game.Utils.delay;
+
 public class ClipHandler {
     private static final Clip[] clips = new Clip[16];   // 4 = fail sound
 

@@ -67,7 +67,7 @@ public class MerlinGame extends JPanel {
         }
         if (lastClick == NEWGAME) {
             if (id == KEY5) {
-                beginGame(magicSquare, id);
+                beginGame (magicSquare, id);
             } else {
                 ClipHandler.play(ClipHandler.BUZZ);
             }
