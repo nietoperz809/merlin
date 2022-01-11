@@ -3,7 +3,7 @@ package game;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-class LED {
+class Led {
     private final int x;
     private final int y;
     private static Graphics g;
@@ -13,12 +13,12 @@ class LED {
     private static boolean blinkflag = false;
 
     public static void setStatics(Graphics g, BufferedImage on, BufferedImage off) {
-        LED.g = g;
-        LED.on = on;
-        LED.off = off;
+        Led.g = g;
+        Led.on = on;
+        Led.off = off;
     }
 
-    public LED(int x, int y) {
+    public Led(int x, int y) {
         this.x = x;
         this.y = y;
     }
