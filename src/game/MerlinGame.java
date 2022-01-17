@@ -21,6 +21,7 @@ public class MerlinGame extends JPanel {
     private BufferedImage offImage;
     private Graphics offGraphics;
     private MagicSquare magicSquare = new MagicSquare(this);
+    private TicTacToe ticTacToe = new TicTacToe(this);
 
     public MerlinGame() throws Exception {
         super();
@@ -68,13 +69,17 @@ public class MerlinGame extends JPanel {
         if (lastClick == NEWGAME) {
             if (id == KEY5) {
                 beginGame (magicSquare, id);
+            } else if (id == KEY1) {
+                beginGame (ticTacToe, id);
             } else {
-                ClipHandler.play(ClipHandler.BUZZ);
+                ClipHandler.play(ClipHandler.LOSE);
             }
             return;
         }
         if (currentGame == KEY5)
             magicSquare.clicked(id);
+        else if (currentGame == KEY1)
+            ticTacToe.clicked(id);
         lastClick = id;
     }
 

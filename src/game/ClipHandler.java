@@ -7,13 +7,16 @@ import javax.swing.*;
 import static game.Utils.delay;
 
 public class ClipHandler {
-    private static final Clip[] clips = new Clip[16];   // 4 = fail sound
+    private static final Clip[] clips = new Clip[19];   // 4 = fail sound
 
     public static final int MON = 11;
     public static final int BEGIN = 12;
     public static final int WIN = 13;
     public static final int BUZZ = 14;
     public static final int INIT = 15;
+    public static final int LOSE = 16;
+    public static final int X = 17;
+    public static final int O = 18;
 
     static {
         try {
@@ -28,6 +31,9 @@ public class ClipHandler {
             clips[BUZZ].open(AudioSystem.getAudioInputStream(Utils.getResource("mBuzz.wav")));
             clips[INIT].open(AudioSystem.getAudioInputStream(Utils.getResource("init.wav")));
             clips[BEGIN].open(AudioSystem.getAudioInputStream(Utils.getResource("mBegin.wav")));
+            clips[LOSE].open(AudioSystem.getAudioInputStream(Utils.getResource("mLose.wav")));
+            clips[X].open(AudioSystem.getAudioInputStream(Utils.getResource("mX.wav")));
+            clips[O].open(AudioSystem.getAudioInputStream(Utils.getResource("mO.wav")));
         } catch (Exception e) {
             System.out.println(e);
         }

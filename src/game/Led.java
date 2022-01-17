@@ -9,7 +9,8 @@ class Led {
     private static Graphics g;
     private static BufferedImage on;
     private static BufferedImage off;
-    private LEDSTATE state = LEDSTATE.OFF;
+    private LEDSTATE currentState = LEDSTATE.OFF;
+    private LEDSTATE initialState = LEDSTATE.OFF;
     private static boolean blinkflag = false;
 
     public static void setStatics(Graphics g, BufferedImage on, BufferedImage off) {
@@ -24,18 +25,19 @@ class Led {
     }
 
     public void setState(LEDSTATE s) {
-        state = s;
+        initialState = s;
+        currentState = s;
     }
 
-    public LEDSTATE getState() {
-        return state;
+    public LEDSTATE getInitialState() {
+        return initialState;
     }
 
     public void toggleBlinkState() {
-        if (state == LEDSTATE.BLINK)
-            state = LEDSTATE.OFF;
-        else if (state == LEDSTATE.OFF)
-            state = LEDSTATE.BLINK;
+        if (currentState == LEDSTATE.BLINK)
+            currentState = LEDSTATE.OFF;
+        else if (currentState == LEDSTATE.OFF)
+            currentState = LEDSTATE.BLINK;
     }
 
     public static void toggleBlink() {
@@ -43,7 +45,7 @@ class Led {
     }
 
     public void paint() {
-        switch (state) {
+        switch (currentState) {
             case ON:
                 g.drawImage(on, x, y, null);
                 break;
