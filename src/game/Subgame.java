@@ -14,4 +14,11 @@ abstract class Subgame {
         merlinGame.currentGame = KEY.NOKEY;
         merlinGame.lastClick = KEY.NOKEY;
     }
+
+    void lose() {
+        Utils.delay (100);
+        ClipHandler.play(ClipHandler.LOSE);
+        merlinGame.currentGame = KEY.NOKEY;
+        merlinGame.lastClick = KEY.NOKEY;
+    }
 }

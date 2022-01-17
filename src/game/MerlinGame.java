@@ -64,6 +64,7 @@ public class MerlinGame extends JPanel {
             return;
         } else if (id == SAMEGAME) {
             lastClick = NEWGAME;
+            allLedsOff ();
             buttonClicked(lastGame);
         }
         if (lastClick == NEWGAME) {

@@ -23,10 +23,10 @@ public class MagicSquare extends Subgame {
         for (int s = 1; s < 10; s++) {
             if (s == 5)
                 continue;
-            if (merlinGame.leds[s].getInitialState() != LEDSTATE.BLINK)
+            if (merlinGame.leds[s].getState() != LEDSTATE.BLINK)
                 return false;
         }
-        return merlinGame.leds[5].getInitialState() == LEDSTATE.OFF;
+        return merlinGame.leds[5].getState() == LEDSTATE.OFF;
     }
 
     private void toggleMSquare(int idx) {
