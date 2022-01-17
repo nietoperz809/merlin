@@ -44,6 +44,24 @@ public class TicTacToe extends Subgame {
         return -1; // not found
     }
 
+    private int getProbablyGoodPos(LEDSTATE ls) {
+        for (int[] a : winPos) {
+            if (merlinGame.leds[a[0]].getState () == ls &&
+                    merlinGame.leds[a[1]].getState () == LEDSTATE.OFF &&
+                    merlinGame.leds[a[2]].getState () == LEDSTATE.OFF)
+                return a[2];
+            if (merlinGame.leds[a[1]].getState () == ls &&
+                    merlinGame.leds[a[0]].getState () == LEDSTATE.OFF &&
+                    merlinGame.leds[a[2]].getState () == LEDSTATE.OFF)
+                return a[0];
+            if (merlinGame.leds[a[2]].getState () == ls &&
+                    merlinGame.leds[a[1]].getState () == LEDSTATE.OFF &&
+                    merlinGame.leds[a[0]].getState () == LEDSTATE.OFF)
+                return a[1];
+        }
+        return -1;
+    }
+
     private int getRandomPos()
     {
         for (int s=1; s<10; s++)
@@ -65,9 +83,11 @@ public class TicTacToe extends Subgame {
             if (found == -1)
                 found = getNewPos (LEDSTATE.BLINK); // defense pos
             if (found == -1)
+                found = getProbablyGoodPos (LEDSTATE.ON); // build oxo pos
+            if (found == -1)
                 found = getRandomPos ();
             if (found == -1) {
-                System.out.println ("all used");
+                tie();
             } else {
                 ClipHandler.play (ClipHandler.O);
                 merlinGame.leds[found].setState (LEDSTATE.ON);

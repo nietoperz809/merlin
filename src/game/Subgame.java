@@ -8,17 +8,25 @@ abstract class Subgame {
     abstract void start();
     abstract void clicked (KEY id);
 
-    void win() {
+    private void reset()
+    {
         Utils.delay (100);
-        ClipHandler.play(ClipHandler.WIN);
         merlinGame.currentGame = KEY.NOKEY;
         merlinGame.lastClick = KEY.NOKEY;
     }
 
+    void win() {
+        reset();
+        ClipHandler.play(ClipHandler.WIN);
+    }
+
+    void tie() {
+        reset();
+        ClipHandler.play (ClipHandler.TIE);
+    }
+
     void lose() {
-        Utils.delay (100);
+        reset();
         ClipHandler.play(ClipHandler.LOSE);
-        merlinGame.currentGame = KEY.NOKEY;
-        merlinGame.lastClick = KEY.NOKEY;
     }
 }
