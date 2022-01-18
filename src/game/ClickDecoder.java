@@ -1,5 +1,6 @@
 package game;
 
+import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -14,6 +15,10 @@ public class ClickDecoder {
         mg.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
+                if (SwingUtilities.isRightMouseButton (e)) {
+                    dialog.Manual.main (null);
+                    return;
+                }
                 KEY idx = NOKEY;
                 int x = e.getX(), y = e.getY();
                 if (max(128, x) == min(165, x) && max(226, y) == min(260, y))

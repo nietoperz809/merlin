@@ -1,0 +1,1285 @@
+MERLIN 
+
+
+
+THE ELECTRONIC WIZARD 
+
+
+
+TRY TO BEAT ME AT TICTACTOE 
+
+
+
+TEST YOUR MEMORY IN ECHO 
+
+
+
+BEAT THE DEALER AT BLACKJACK 13 
+
+
+
+BREAK MY CODE IN MAGIC SQUARE 
+
+
+
+TEST YOUR LOGIC IN MINDBENDER 
+
+
+
+BROTHERS 
+
+
+
+BROTHERS 
+
+
+
+Rules © 1978 Parker Brothers Div. of General Mills Fun 
+Group, Inc., Beverly, Mass. 01915. Printed in U.S.A. 
+
+MERLIN is Parker Brothers trademark for its hand-held 
+interactive electronic game equipment. 
+
+
+
+MERLIN™ 
+
+The Electronic Wizard 
+
+from Parker Brothers 
+
+For 1 or 2 Players 
+
+Ages 7-Adult 
+
+
+
+MERLIN™ is a remarkably intelligent computer. 
+Through light and sound he plays six different 
+games of chance, strategy, memory, logic and 
+skill. You can even teach him to play music! 
+
+As you compete with him, you'll discover that 
+MERLIN is very talkative. He speaks with a unique 
+vocabulary of 20 electronic sounds. With these 
+sounds he challenges you to a game, responds 
+to your moves, and tells you when you've won, 
+lost or tied. It won't take you long at all to 
+become familiar with each of MERLIN'S sounds. 
+
+Lights are part of the action, too! As you play, 
+you'll see that MERLIN uses lights to keep track of 
+your moves, to show you your score, and to 
+remind you, when you've finished playing, that 
+you haven't yet turned him off. 
+
+Are you ready to match wits with MERLIN? Here 
+are the games he plays : 
+
+1. Tic-Tac-Toe. MERLIN'S aggressive tactics will 
+keep you on your toes in this famous strategy 
+game. 
+
+2. Music Machine. Teach MERLIN to play a tune 
+of up to 48 notes and rests. 
+
+3. Echo. Repeat a tune of random notes that 
+MERLIN teaches you. 
+
+4. Blackjack 13. MERLIN is the dealer in this com- 
+puterized version of the classic card game. 
+
+5. Magic Square. Try to form a square of 8 lights. 
+This electronic puzzle changes constantly as you 
+play. 
+
+6. Mindbender. Discover the computer's mystery 
+number. This game of logic is the ultimate chal- 
+lenge-to win you'll have to read MERLIN'S mind! 
+
+
+
+TECHNICAL INFORMATION 
+ABOUT MERLIN 
+
+BEFORE PLAYING, PLEASE 
+READ THIS SECTION CAREFULLY 
+
+
+
+1) PROPER CARE. 
+
+MERLIN'S computer brain is made of many 
+delicate electronic parts. Therefore: 
+
+- Never take MERLIN apart. 
+
+- Don't drop or jolt MERLIN. 
+
+- Take care not to get MERLIN wet. 
+
+- When pressing one of MERLIN'S buttons, 
+touch it lightly in the very center. Pressing 
+hard is unnecessary and can damage the 
+game. 
+
+- Don't use a pen or pencil to press the 
+buttons; use your fingers only. 
+
+2] BATTERIES. 
+
+MERLIN can be made completely portable if 
+you power him with batteries. To do this you'll 
+need 6 AA-size batteries. We strongly 
+recommend that you use only ALKALINE 
+BATTERIES: they will last much longer than regular 
+carbon batteries. 
+
+3) AC ADAPTOR. 
+
+With an AC adaptor you can run MERLIN on 
+house current instead of batteries. However, buy 
+only an AC adaptor that meets the following 
+specifications: 
+
+Nominal: 9 Volt DC at 75 milliamps 
+Maximum: 10.5 Volt DC at 5 milliamps 
+Minimum: 7.5 Volt DC at 150 milliamps 
+
+Not all 9-volt, 75-milliamp adaptors will satisfy 
+the minimum and maximum specifications 
+shown above. Certain ones will cause MERLIN to 
+operate erratically. We therefore recommend 
+that you bring your MERLIN to a store to test the 
+AC adaptor that you're considering. 
+
+If you can't conveniently locate an AC adaptor 
+that meets these specifications, you may order 
+one from Parker Brothers by sending your name, 
+address and a check or money order for $7.95 
+to: Parker Brothers, P.O. Box 1006, Beverly, Mass. 
+01915. Attention: Consumer Response Dept. 
+
+
+
+4) SIGNS OF WEAK BATTERIES. 
+
+Unlike an AC adaptor, batteries eventually have 
+to be replaced. Therefore, if ever you find that 
+MERLIN is not working properly, you probably 
+need new batteries. Any one of the following 
+signs will indicate the need for new batteries: 
+
+a) When you turn MERLIN on, no lights will 
+flash. 
+
+b) When you turn MERLIN on, all of the lights 
+will shine steady. 
+
+c) As you play, you'll hear a continuous 
+sound. 
+
+d) As you play, the keyboard won't respond 
+as it should. 
+
+If any of these problems occur with new batter- 
+ies, check to make sure that you've installed 
+them correctly. 
+
+
+
+OBJECT: 
+
+To be the first to occupy three squares in a 
+row -horizontally, vertically or diagonally* 
+
+PREPARATION: 
+
+Press NEW GAME. Then press#l. The #10 light will 
+blink, indicating that the game is on. 
+
+PLAYING: 
+
+You and MERLIN take turns occupying one 
+square at a time. Either of you may make the first 
+move. 
+
+a) To occupy a square yourself, press any 
+unlighted square from 1 to 9. The square you 
+choose will blink. 
+
+b) MERLIN will take his turn when you press 
+COMPUTER TURN. The square he chooses will 
+shine steady. 
+
+
+
+WINNING: 
+
+The winner is the first to occupy three squares in 
+
+a row. 
+
+If you win -with three blinking lights in a row- 
+
+MERLIN will make the WIN sound. 
+
+If MERLIN wins -with three steady lights in a 
+
+row - he will make the LOSE sound. 
+
+If neither of you wins, MERLIN will make the TIE 
+
+sound. 
+
+CONTINUING: 
+
+To play Tic-Tac-Toe again, press SAME GAME. 
+
+*ln this classic strategy game your opponent is 
+MERLIN, not another person. 
+
+
+
+MUSIC MACHINE 
+
+OBJECT: 
+
+To teach MERLIN a tune and then be enter- 
+tained as he plays it back to you. 
+
+PREPARATION: 
+
+Press NEW GAME. Then press #2. 
+
+PLAYING: 
+
+Buttons 2-9 are the musical scale: do, re, mi, fa, 
+sol, la, ti, do. 
+
+Button #1 is low "sol"- one octave lower. 
+Button #10 is high "re"-one octave higher. 
+Button is a rest-each time you press it, MERLIN 
+will pause 1 beat. (Because it's a rest, this button 
+makes no sound when you press it.) 
+
+MERLIN can learn a tune of up to 48 notes and 
+rests. While you're composing, however, don't 
+worry if you can't remember how many buttons 
+you've pressed. MERLIN will let you know-with 
+the LOSE sound -when you've pressed a total of 
+48 buttons. 
+
+After you've finished composing a tune, press 
+COMPUTER TURN and enjoy your music. 
+
+CONTINUING: 
+
+a) To play the same tune again, press 
+COMPUTER TURN. 
+
+b) To compose a different tune, press SAME 
+GAME and start again. 
+
+c) After MERLIN stops playing your tune, you 
+can then continue that tune yourself by press- 
+
+
+
+ing the appropriate buttons. The extra notes 
+that you play will not become a part of the 
+tune that you just taught MERLIN to play. 
+
+Here are some tunes that you can teach MERLIN 
+to play. Press the buttons in the order in which 
+they appear. 
+
+
+
+AROVIN' 
+
+
+
+
+
+
+6-7-0 5-7-6 
+
+
+0-4-6 
+
+
+5-4-3 
+
+
+3-4-5 6-9-7 
+
+
+5-4-0 
+
+
+3-0-2 
+
+
+AULD LANG SYNE 
+
+
+
+
+1-2-0 0-2-2 
+
+
+0-4-0 
+
+
+3-0-0 
+
+
+0-0-2 4-0-6 
+
+
+0-7-0 
+
+
+0-0-0 
+
+
+4-4-0 2-0-3 
+
+
+0-0-2 
+
+
+3-0-4 
+
+
+
+2-4-2 1-1-2 
+
+
+
+2-3-0 4-0-2 
+0-7-0 6-0-0 
+
+
+
+BEETHOVEN'S 9TH 
+
+
+
+4-4-5 6-6-5 
+
+
+4-3-2 
+
+
+2-3-4 
+
+
+4-3-3 
+
+
+0-4-4 
+
+
+5-6-6 5-4-3 
+
+
+2-2-3 
+
+
+4-3-2 
+
+
+2-0-3 
+
+
+3-4-2 
+
+
+3-5-4 2-3-5 
+
+
+4-3-2 
+
+
+3-1 
+
+
+
+
+
+
+BLOW THE MAN DOWN 
+
+
+
+
+
+
+6-7-6 4-2-4 
+
+
+6-7-6 
+
+
+4-0-0 
+
+
+6-0-0 
+
+
+7-0-0 
+
+
+5-4-5 3-0-0 
+
+
+5-6-5 
+
+
+3-1-3 
+
+
+5-6-5 
+
+
+3-0-0 
+
+
+6-6-6 6-0-5 
+
+
+4-3-4 
+
+
+2 
+
+
+
+
+
+
+CLEMENTINE 
+
+
+
+
+
+
+
+
+
+
+2-2-2 0-1-0 
+
+
+4-4-4 
+
+
+0-2-0 
+
+
+2-4-6 
+
+
+0-0-6 
+
+
+5-4-3 0-0-0 
+
+
+3-4-5 
+
+
+0-5-0 
+
+
+4-3-4 
+
+
+0-2-0 
+
+
+2-4-3 0-0-1 
+
+
+2-3-2 
+
+
+
+
+
+
+
+
+
+COCKLES AND MUSSELS 
+
+
+
+1-2-2 2-2-4 2-3-3 
+
+
+3-3-5 
+
+
+3-6-4 
+
+
+2-6-4 
+
+
+2-2-3 4-3-0 1-2-2 
+
+
+2-2-4 
+
+
+2-3-3 
+
+
+3-3-5 
+
+
+3-6-4 2-6-4 2-3-2 
+
+
+3-2 
+
+
+
+
+
+
+FRERE JACQUES 
+
+
+
+
+
+
+
+
+2-3-4 2-2-3 4-2-4 
+
+
+5-6-0 
+
+
+4-5-6 
+
+
+0-6-7 
+
+
+6-5-4 0-2-0 6-7-6 
+
+
+5-4-0 
+
+
+2-0-2 
+
+
+0-1-0 
+
+
+2-0-0 0-2-0 1-0-2 
+
+
+
+
+
+
+
+
+
+IT CAME UPON THE MIDNIGHT CLEAR 
+
+2-7-0 4-6-5 3-2-0 3-2-0 2-3-4 5-5-6 
+7-6-0 0-0-0- 2-7-0 4-6-5 3-2-0 3-2-0 
+2-3-0 3-4-3 2-5 
+
+
+
+JINGLE BELLS 
+
+4-4-4 0-4-4 4-0-4 6-2-3 4-0-0 0-5-5 
+5-5-5 4-4-4 6-6-5 3-2 
+
+KNICK KNACK PADDYWHACK 
+
+6-4-6 0-6-4 6-0-7 6-5-4 3-4-5 4-6-2 
+2-2-2 4-6-0 6-3-3 5-4-3 2 
+
+
+
+LONDON BRIDGE 
+
+6-7-6 5-4-5 6-0-3 4-5-0 4-5-6 0-6-7 
+6-5-4 5-6-0 3-0-6 0-4-2 
+
+
+
+MARY HAD A LITTLE LAMB 
+
+4-3-2 3-4-4 4-0-3 3-3-0 4-6-6 0-4-3 
+2-3-4 4-4-4 3-3-4 3-2 
+
+
+
+OLD FOLKS AT HOME 
+
+4-0-3 2-4-3 2-0-9 0-7-9 0-0-6 0-0-4 
+0-2-0 3-0-0 0-4-0 3-2-4 3-2-0 9-0-7 
+9-0-0 6-0-4 2-3-0 3-0-2 
+
+
+
+ONTOPOFOLDSMOKEY 
+
+
+
+
+
+
+2-2-4 6-9-0 0-7-0 
+
+
+0-0-0 
+
+
+7-5-6 
+
+
+7-6-0 
+
+
+0-0-0 2-2-4 6-6-0 
+
+
+0-3-0 
+
+
+0-0-0 
+
+
+4-5-4 
+
+
+3-2 
+
+
+
+
+
+
+
+
+RED RIVER VALLEY 
+
+
+
+
+
+
+
+
+1-2-4 0-4-4 4-0-3 
+
+
+4-3-2 
+
+
+0-0-0 
+
+
+0-1-2 
+
+
+4-0-2 4-6-0 5-4-3 
+
+
+0-0-0 
+
+
+0-0-6 
+
+
+5-4-0 
+
+
+4-3-2 0-3-4 6-5-0 
+
+
+
+
+
+
+
+
+
+ROW ROW ROW YOUR BOAT 
+
+2-0-2 0-2-3 4-0-4 3-4-5 6-0-0 0-9-9 
+6-6-4 4-2-2 6-5-4 3-2 
+
+
+
+SHENANDOAH 
+
+
+
+
+
+
+
+
+2-2-2 0-0-3 4-5-7 
+
+
+0-6-0 
+
+
+0-0-9 
+
+
+8-7-0 
+
+
+0-6-7 6-4-6 0-6-7 
+
+
+7-7-0 
+
+
+0-4-6 
+
+
+4-3-2 
+
+
+0-1-2 3-4-2 3-2 
+
+
+
+
+
+
+
+
+SILENT NIGHT 
+
+
+
+
+
+
+
+
+6-0-0 7-6-0 4-0-0 
+
+
+0-6-0 
+
+
+0-7-6 
+
+
+0-4-0 
+
+
+0-0-10 0-0-10 0-8-0 
+
+
+0-0-9 
+
+
+0-0-9 
+
+
+0-6-0 
+
+
+0-9-0 6-4-6 0-5-0 
+
+
+3-0-2 
+
+
+
+
+
+
+
+TWINKLE TWINKLE LITTLE STAR 
+
+2-2-6 6-7-7 6-0-5 5-4-4 3-3-2 0-6-6 
+5-5-4 4-3-0 2-2-6 6-7-7 6-0-5 5-4-4 
+3-3-2 
+
+WE THREE KINGS 
+
+7-0-6 5-0-3 4-5-4 3-0-0 7-0-6 5-0-3 
+4-5-4 3-0-0 5-0-5 6-0-6 7-0-7 9-7-6 
+5-0-5 4-0-4 3 
+
+
+
+ECHO 
+
+
+
+OBJECT: 
+
+To repeat a tune of random notes that MERLIN 
+plays to you. 
+
+PREPARATION: 
+
+Press NEW GAME. Then press #3. Both the and 
+10 lights will blink. This is MERLIN'S way of asking 
+you to select the number of notes in his tune. To 
+do this, press one button from 1 to 9. The higher 
+the number you select, the longer and more dif- 
+ficult the tune will be. Then press COMPUTER 
+TURN and MERLIN will play you the tune. 
+
+EXAMPLE: To select a game of average diffi- 
+culty, press #5. Then press COMPUTER TURN and 
+MERLIN will play you a 5-note tune. To win, you 
+must repeat MERLIN'S tune exactly as he played 
+it. 
+
+PLAYING: 
+
+1. As MERLIN plays his tune, listen carefully to 
+the notes and watch closely the lights that 
+accompany them. 
+
+
+
+2. When MERLIN stops playing, try to repeat the 
+exact order of notes and accompanying lights 
+by pressing the appropriate buttons. 
+
+a) If you press a button in the correct order, it 
+will light and sound its note. 
+
+b) If you press a button out of order, you'll hear 
+a buzz. Even if MERLIN buzzes you, continue 
+guessing - starting with the next note - until 
+you've pressed the appropriate number of 
+buttons. 
+
+SCORING: 
+
+a) If all of your notes are in the correct order, 
+MERLIN will make the WIN sound. 
+
+b) Otherwise MERLIN will make the LOSE 
+sound and will show you -by lighting one 
+numbered button - how many errors you've 
+made. 
+
+CONTINUING: 
+
+To play the same tune again, press COMPUTER 
+TURN. To try a different tune - even one of equal 
+difficulty -press SAME GAME, press the desired 
+level of difficulty, then press COMPUTER TURN. 
+
+COMPETING AGAINST 
+ANOTHER PERSON: 
+
+On your turn, keep the buttons hidden from view. 
+When you've finished guessing and have seen 
+your score, hand MERUN to your opponent. Your 
+opponent presses COMPUTER TURN and tries to 
+repeat the very same tune. The winner is the one 
+to repeat MERLIN'S tune with the fewer errors. 
+
+
+
+BLACKJACK 13 
+
+In this game, buttons 1 through 10 represent a 
+deck of 10 cards. 
+
+OBJECT: 
+
+To acquire the higher hand of 13 or less. 
+
+PREPARATION: 
+
+Press NEW GAME. Then press #4. 
+
+PLAYING: 
+
+1. MERLIN is the dealer. Both of you start the 
+game with a hand of one card. The blinking 
+light shows your hand; the steady light shows 
+
+
+
+MERLIN'S hand. You (not MERLIN) also start the 
+game with a stake of five chips. 
+
+2. On your turn you may either "hit" your hand or 
+"stand." 
+
+a) If you want to "hit" your hand -to ask for 
+another card - press HIT ME. 
+
+If your hand then totals less than 13, you may 
+again either "hit" or "stand." 
+If your hand totals more than 13, you "bust" 
+and immediately lose. 
+
+b) If you want to "stand"- to take no more 
+cards - press COMPUTER TURN. 
+
+3. MERLIN then plays his hand according to the 
+following strategy: 
+
+a) If his hand is less than 10, he hits. If he 
+"busts," you win. 
+
+b) If his hand is 10 or more, he stands. When he 
+stands, MERLIN then compares his hand with 
+yours in order to determine a winner. At no 
+other time can MERLIN see your hand. 
+
+WINNING: 
+
+The winner is the player with the higher hand of 
+13 or less. Along with the WIN, LOSE or TIE sound, 
+MERLIN will also show each card that was 
+drawn in the hand. 
+
+CONTINUING: 
+
+This game consists of multiple hands. To play 
+another hand, press SAME GAME and watch the 
+numbered buttons closely. MERLIN will very 
+briefly light one number to show you how many 
+chips you have. (You receive one chip for each 
+hand that you win; you lose one chip for each 
+hand that MERLIN wins.) Then, to start the next 
+hand, MERLIN will deal each of you one card. 
+
+If you accumulate ten chips, you break the bank 
+and win the game. If you lose all of your chips, 
+you go broke and MERLIN ends the game. To 
+start a new game, press NEW GAME, then press 
+#4. You'll start again with 5 chips. 
+
+
+
+AGIC SQUARI 
+
+
+
+OBJECT: 
+
+To form a square of eight lights by lighting but- 
+tons 1,2,3, 4, 6, 7, 8 and 9. At the same time, you 
+will have to turn off button #5-the middle 
+button. 
+
+
+
+®. ®. 
+
+
+
+M]®M 
+
+
+
+PREPARATION: 
+
+Press NEW GAME. Then press #5 and watch the 
+numbered buttons closely. MERLIN will very 
+briefly show you the Magic Square. Then you'll 
+see a random display of one or more blinking 
+lights.* 
+
+PLAYING: 
+
+Press buttons 1-9, in any order, until you've 
+formed the Magic Square. When you succeed, 
+MERLIN will flash the Magic Square and will 
+make the WIN sound. 
+
+MERLIN'S Secret Code 
+
+As you play Magic Square, you'll see that the 
+nine numbered buttons affect each others' 
+lights in certain predictable patterns. Each time 
+you press one of the buttons, certain lights 
+always come on and other lights always go off. 
+To form the Magic Square, you'll find it helpful to 
+understand these patterns- MERLIN'S secret 
+code. 
+
+EXAMPLE: Button #1 always affects lights 1, 2, 4 
+and 5 in a predictable pattern. That is, when 
+you press button #1, it reverses these lights: the 
+ones that were off will go on and the ones that 
+were on will go off. In this same way each of the 
+other numbered buttons reverses other groups 
+of lights. After you've played a few times you'll 
+discover which buttons reverse which groups of 
+lights. 
+
+
+
+CONTINUING: 
+
+To play Magic Square again, press SAME GAME 
+and start pressing buttons 1-9. 
+
+CHALLENGING ANOTHER PERSON - 
+FOR EXPERTS ONLY 
+
+On your turn, keep the buttons hidden from view. 
+After completing the Magic Square, take it 
+apart by secretly pressing up to three different 
+buttons from 1 to 9. Tell your opponent how many 
+buttons you just pressed. Then challenge your 
+opponent to recreate the Magic Square by 
+pressing the same number of buttons. To suc- 
+ceed, your opponent will have to press, in any 
+order, the same buttons that you pressed. 
+
+EXAMPLE: After completing the Magic Square, 
+take it apart by secretly pressing buttons 4, 9 
+and 2. Then challenge your opponent to try to 
+recreate the Magic Square by pressing only 
+three buttons. To succeed, your opponent will 
+have to press buttons 4, 9 and 2 in any order. 
+
+When your opponent recreates the Magic 
+Square, the two of you then reverse roles. In other 
+words, your opponent secretly presses any three 
+different buttons and challenges you in the 
+same way. The winner is the one to meet the 
+challenge. If each of you requires more than 
+three guesses, the winner is the one to recreate 
+the Magic Square in the fewer tries. 
+
+*At this point, or at other times during the game, 
+buttons 1-9 may all go dark. If this happens, 
+button #10 will blink, indicating that the game 
+is still on. 
+
+
+
+MINDBENDER 
+
+OBJECT: 
+
+To discover the mystery number in MERLIN'S 
+computer brain. 
+
+PREPARATION: 
+
+Press NEW GAME. Then press #6. The and 10 
+lights will blink. This is MERLIN'S way of asking you 
+to select the length of his mystery number. To do 
+this, press one button from 1 to 9. The higher the 
+number you press, the longer and more difficult 
+the mystery number will be. (For your first game. 
+
+
+
+we recommend that you press #2 -a 2-digit 
+mystery number.) 
+
+EXAMPLE: Let's say that you press #4. In secret, 
+MERLIN will then select a random, 4-digit num- 
+ber. Through a process of deduction, you try to 
+discover all four digits in the correct order. 
+
+To keep track of your guesses, use a pencil and 
+a piece of paper. 
+
+PLAYING: 
+
+1. Try to discover the mystery number by entering 
+guesses that correspond to the length of the 
+number. EXAMPLE: If the mystery number has four 
+digits, enter each guess by pressing any four 
+buttons from 1 to 9 in any order that you prefer. 
+You might want to guess 2-3-8-2, or 1-6-9-5, or 
+4-4-4-4, etc. 
+
+2. MERLIN will then let you know how accurately 
+you guessed: 
+
+a) If you guessed the correct digits in the 
+correct order, MERLIN will make the WIN 
+sound and will flash a light for each digit in 
+the number. 
+
+b) if any part of your guess was incorrect, 
+MERLIN will make the LOSE sound and will 
+show you how close your guess was: 
+
+If none of the digits in your guess is a part of 
+his number, MERLIN will blink the #10 light. 
+
+For each correct digit that is also in the cor- 
+rect order, MERLIN will show a blinking light. 
+
+For each correct digit that is not in the cor- 
+rect order, MERLIN will show a steady light. 
+
+The blinking and steady lights will start 
+at #1 and will not necessarily corre- 
+spond either to the digits that you've 
+guessed or to MERLIN'S mystery 
+number. 
+
+EXAMPLE: Let's say that you ask MERLIN to select 
+a 4-digit mystery number. In secret, MERLIN 
+selects the number 9-2-4-2. 
+
+a) If one of your guesses is 1-3-5-7, MERLIN will 
+blink the #10 light. This light tells you that none 
+of the digits in your guess was correct. 
+
+b) If one of your guesses is 1-2-3-4, MERLIN will 
+show a blinking light at #1 and a steady light 
+at #2. These lights tell you that two of the 
+
+
+
+digits in your guess were correct and that one 
+of them was in the correct order. Now it's up 
+to you to determine which two digits you 
+guessed correctly and which one of them 
+was in the correct order, 
+c) If one of your guesses is 4-2-2-9, MERLIN will 
+show a blinking light at #1 and steady lights 
+at #s 2, 3 and 4. These lights tell you that all of 
+the digits in your guess were correct and that 
+one of them was in the correct order. 
+
+If you entered this guess right after the previous 
+guess (1-2-3-4), you'd gain some important clues 
+about the mystery number. First, you'd see that 
+"2" is the only digit that appears in both guesses 
+in the same order. You'd know, therefore, that the 
+blinking light represents this digit. You'd also see 
+that the "4" is the only other digit that appears in 
+both guesses: fourth position in one guess, first in 
+the other. You'd know therefore, that the "4" must 
+fall in either the second or third position of the 
+4-digit mystery number. 
+
+d) If you guess 9-2-4-2, MERLIN will show blinking 
+lights at #s 1, 2, 3 and 4 and will also make the 
+WIN sound. 
+
+SCORING: 
+
+After you win, press SAME GAME. MERLIN will 
+briefly shine a light showing the number of 
+guesses you took. Remember, however, MERLIN 
+can score only up to 10 guesses. 
+
+COMPETING AGAINST 
+ANOTHER PERSON: 
+
+On your turn keep the buttons hidden from view. 
+After discovering the mystery number and learn- 
+ing your score, hand MERLIN to your opponent. 
+Your opponent presses SAME GAME and also 
+tries to determine the mystery number. The win- 
+ner is the one to learn the mystery number in the 
+fewer guesses. 
+
+
+
+www.handheldmuseum.com 
+
+
+
+We will be happy to answer questions about this 
+game. Write to: Consumer Response Dept., 
+Parker Brothers, 50 Dunham Road, Beverly, Mass. 
+01915. 
+
+
+
+LIMITFO WARRANTY PARKER BROTHERS MERLIN 
+
+PARKER BROTHERS, DIVISION OF GENERAL MILLS FUN 
+GROUP, INC. (PARKER BROTHERS) hereby warrants, 
+subject to the conditions set forth below, that if the 
+components of this product prove defective because 
+of improper workmanship or material : 
+
+During the period of 180 days from the date of origi- 
+nal purchase, PARKER BROTHERS will repair or 
+replace the product, without charge for parts or 
+labor, or refund the purchase price, at Parker 
+Brothers' option. 
+
+CONDITIONS: 
+
+1. Registration: The enclosed registration card 
+must be mailed to PARKER BROTHERS (address: 50 
+Dunham Rd, Beverly, MA 01915, Attention: Consumer 
+Response Dept.) within 10 days after the date of origi- 
+nal purchase at retail. If this registration card is not 
+mailed, the retail sales receipt or other proof of pur- 
+chase must be provided for work to be done under 
+the terms of this LIMITED WARRANTY. 
+
+2. Proper Delivery: The product must be shipped, 
+prepaid, or delivered to PARKER BROTHERS (address: 
+190 Bridge Street, Salem, MA 01970, Attention: Qual- 
+ity Control Dept.) for servicing either in the original 
+package or in a similar package providing an egual 
+degree of protection. 
+
+3. Unauthorized Repair, Abuse, etc. The product must 
+not have been previously altered, repaired or ser- 
+viced by anyone other than PARKER BROTHERS; the 
+product must not have been subjected to an acci- 
+dent, misuse, abuse or have been operated contrary 
+to the instructions contained in the accompanying 
+manual. 
+
+EXCEPT TO THE EXTENT PROHIBITED BY APPLICABLE 
+LAW, ALL IMPLIED WARRANTIES MADE BY PARKER 
+BROTHERS IN CONNECTION WITH THE PRODUC T 
+INCLUDING THE WARRANTY OF MERCHANTABILITY, 
+ARE LIMITED IN DURATION TO A PERIOD OF 180 DAYS 
+FROM THE DATE OF ORIGINAL PURCHASE; AND NO 
+WARRANTIES, WHETHER EXPRESSED OR IMPLIED, 
+INCLUDING THE WARRANTY OF MERCHANTABILITY, 
+SHALL APPLY TO THIS PRODUCT AFTER SAID PERIOD. 
+SHOULD THIS PRODUCT PROVE DEFECTIVE IN WORK- 
+MANSHIP AND MATERIAL, THE CONSUMER'S SOLE 
+REMEDY SHALL BE SUCH REPAIR, REPLACEMENT OR 
+REFUND AS IS HEREIN ABOVE EXPRESSLY PROVIDED; 
+AND UNDER NO CIRCUMSTANCES SHALL PARKER 
+BROTHERS BE LIABLE FOR ANY LOSS OR DAMAGE. 
+DIRECT OR CONSEQUENTIAL, ARISING OUT OF THE 
+USE OF, OR INABILITY TO USE, THIS PRODUCT. 
+
+Some states do no allow limitations on how long an 
+implied warranty lasts, or the exclusions or limitations 
+of incidental or consequential damages, so the 
+above limitations or exclusion may not apply to you. 
+This warranty gives you specific legal rights and you 
+may also have other rights which vary from state to 
+state. 
+
+
+
