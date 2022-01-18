@@ -16,7 +16,7 @@ public class ClickDecoder {
             @Override
             public void mousePressed(MouseEvent e) {
                 if (SwingUtilities.isRightMouseButton (e)) {
-                    dialog.Manual.main (null);
+                    dialog.Manual.main (mg);
                     return;
                 }
                 KEY idx = NOKEY;

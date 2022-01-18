@@ -22,6 +22,7 @@ public class MerlinGame extends JPanel {
     private Graphics offGraphics;
     private MagicSquare magicSquare = new MagicSquare(this);
     private TicTacToe ticTacToe = new TicTacToe(this);
+    private MusicMachine musicMachine = new MusicMachine (this);
 
     public MerlinGame() throws Exception {
         super();
@@ -68,17 +69,26 @@ public class MerlinGame extends JPanel {
             buttonClicked(lastGame);
         }
         if (lastClick == NEWGAME) {
-            if (id == KEY5) {
-                beginGame (magicSquare, id);
-            } else if (id == KEY1) {
-                beginGame (ticTacToe, id);
-            } else {
-                ClipHandler.play(ClipHandler.LOSE);
+            switch (id) {
+                case KEY5:
+                    beginGame (magicSquare, id);
+                    break;
+                case KEY1:
+                    beginGame (ticTacToe, id);
+                    break;
+                case KEY2:
+                    beginGame (musicMachine, id);
+                    break;
+                default:
+                    ClipHandler.play (ClipHandler.LOSE);
+                    break;
             }
             return;
         }
         if (currentGame == KEY5)
             magicSquare.clicked(id);
+        else if (currentGame == KEY2)
+            musicMachine.clicked(id);
         else if (currentGame == KEY1)
             ticTacToe.clicked(id);
         lastClick = id;

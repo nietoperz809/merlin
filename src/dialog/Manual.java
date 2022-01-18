@@ -1,5 +1,7 @@
 package dialog;
 
+import game.MerlinGame;
+
 import javax.swing.*;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
@@ -28,7 +30,7 @@ public class Manual extends JDialog {
         });
     }
 
-    public static void main (String[] args) {
+    public static void main (MerlinGame mg) {
         Manual dialog = new Manual ();
 
         StyledDocument doc = dialog.textPane1.getStyledDocument();
@@ -39,7 +41,9 @@ public class Manual extends JDialog {
         String result = new BufferedReader (new InputStreamReader (is))
                 .lines().collect(Collectors.joining("\n"));
         dialog.textPane1.setText (result);
+        dialog.textPane1.setCaretPosition (0);
 
+        dialog.setLocationRelativeTo (null);
         dialog.pack ();
         dialog.setVisible (true);
     }
