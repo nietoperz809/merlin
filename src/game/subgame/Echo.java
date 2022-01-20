@@ -51,9 +51,11 @@ public class Echo extends Subgame {
                 }
                 merlinGame.leds[0].setState (LEDSTATE.OFF);
                 ClipHandler.play(ClipHandler.X);
-                System.out.println (seq);
-            } else
-            {
+            } else { // user plays
+                if (v != seq.get(input.size ())) {
+                    ClipHandler.play (ClipHandler.BUZZ);
+                    return;
+                }
                 merlinGame.leds[v].setState (LEDSTATE.ON);
                 ClipHandler.playWait (v);
                 merlinGame.leds[v].setState (LEDSTATE.OFF);
