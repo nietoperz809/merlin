@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Echo extends Subgame {
-    private int length;
-    private ArrayList<Integer> seq = new ArrayList<> ();
-    private ArrayList<Integer> input = new ArrayList<> ();
+    private int errors = 0;
+    private final ArrayList<Integer> seq = new ArrayList<> ();
+    private final ArrayList<Integer> input = new ArrayList<> ();
     public Echo (MerlinGame mg) {
         super (mg);
     }
@@ -17,19 +17,19 @@ public class Echo extends Subgame {
     public void start () {
         merlinGame.leds[0].setState (LEDSTATE.BLINK);
         merlinGame.leds[10].setState (LEDSTATE.BLINK);
-        length = -1;
         seq.clear ();
         input.clear ();
+        errors = 0;
     }
 
     @Override
     public void clicked (KEY id) {
         if (id == KEY.COMPTURN) {
             if (!seq.isEmpty ()) {
-                for (int t : seq) {
+                for (int t : seq) { // play sequence
                     merlinGame.leds[t].setState (LEDSTATE.ON);
                     ClipHandler.playWait (t);
-                    Utils.delay (100);
+                    //Utils.delay ();
                     merlinGame.leds[t].setState (LEDSTATE.OFF);
                 }
             }
@@ -37,8 +37,7 @@ public class Echo extends Subgame {
         }
         int v = id.getNumVal ();
         if (v >= 0 && v <= 9) {
-            if (length == -1) {
-                length = v;
+            if (seq.isEmpty ()) { // generate sequence
                 Random rnd = new Random();
                 int before = -1;
                 int z;
@@ -54,6 +53,12 @@ public class Echo extends Subgame {
             } else { // user plays
                 if (v != seq.get(input.size ())) {
                     ClipHandler.play (ClipHandler.BUZZ);
+                    errors++;
+                    if (errors == seq.size()) {
+                        input.clear ();
+                        errors = 0;
+                        lose (false);
+                    }
                     return;
                 }
                 merlinGame.leds[v].setState (LEDSTATE.ON);
