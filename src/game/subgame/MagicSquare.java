@@ -1,4 +1,6 @@
-package game;
+package game.subgame;
+
+import game.*;
 
 public class MagicSquare extends Subgame {
     private final int[][] squareLogic = {
@@ -34,7 +36,7 @@ public class MagicSquare extends Subgame {
         for (int s : arr)
             merlinGame.leds[s].toggleBlinkState();
         if (isMSquare()) {
-            win();
+            win(true);
         }
     }
 

@@ -3,7 +3,7 @@ package game;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-class Led {
+public class Led {
     private static Graphics g;
     private static BufferedImage on;
     private static BufferedImage off;

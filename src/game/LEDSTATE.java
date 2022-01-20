@@ -1,3 +1,3 @@
 package game;
 
-enum LEDSTATE {ON, OFF, BLINK}
+public enum LEDSTATE {ON, OFF, BLINK}

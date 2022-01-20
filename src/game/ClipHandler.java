@@ -41,6 +41,13 @@ public class ClipHandler {
         }
     }
 
+    public static void playWait (int num) {
+        play (num);
+        while(clips[num].getMicrosecondLength() != clips[num].getMicrosecondPosition())
+        {
+        }
+    }
+
     public static void play(int num) {
         try {
             clips[num].stop();

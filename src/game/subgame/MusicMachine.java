@@ -1,25 +1,27 @@
-package game;
+package game.subgame;
+
+import game.*;
 
 import java.util.ArrayList;
 
 import static game.KEY.KEY0;
 
-public class MusicMachine extends Subgame{
+public class MusicMachine extends Subgame {
 
     private ArrayList<KEY> list = new ArrayList<> ();
 
-    MusicMachine (MerlinGame mg) {
+    public MusicMachine (MerlinGame mg) {
         super(mg);
     }
 
     @Override
-    void start () {
+    public void start () {
         merlinGame.leds[10].setState (LEDSTATE.BLINK);
         list.clear ();
     }
 
     @Override
-    void clicked (KEY id) {
+    public void clicked (KEY id) {
         int v = id.getNumVal ();
         if (v >= 0 && v <= 9) {
             list.add (id);

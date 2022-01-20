@@ -1,5 +1,7 @@
 package game;
 
+import game.subgame.*;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -23,6 +25,7 @@ public class MerlinGame extends JPanel {
     private MagicSquare magicSquare = new MagicSquare(this);
     private TicTacToe ticTacToe = new TicTacToe(this);
     private MusicMachine musicMachine = new MusicMachine (this);
+    private Echo echo = new Echo (this);
 
     public MerlinGame() throws Exception {
         super();
@@ -79,6 +82,9 @@ public class MerlinGame extends JPanel {
                 case KEY2:
                     beginGame (musicMachine, id);
                     break;
+                case KEY3:
+                    beginGame (echo, id);
+                    break;
                 default:
                     ClipHandler.play (ClipHandler.LOSE);
                     break;
@@ -91,6 +97,8 @@ public class MerlinGame extends JPanel {
             musicMachine.clicked(id);
         else if (currentGame == KEY1)
             ticTacToe.clicked(id);
+        else if (currentGame == KEY3)
+            echo.clicked(id);
         lastClick = id;
     }
 

@@ -1,4 +1,6 @@
-package game;
+package game.subgame;
+
+import game.*;
 
 public class TicTacToe extends Subgame {
 
@@ -8,7 +10,7 @@ public class TicTacToe extends Subgame {
             {1,5,9}, {3,5,7}
     };
 
-    TicTacToe(MerlinGame ml) {
+    public TicTacToe (MerlinGame ml) {
         super(ml);
     }
 
@@ -87,13 +89,13 @@ public class TicTacToe extends Subgame {
             if (found == -1)
                 found = getRandomPos ();
             if (found == -1) {
-                tie();
+                tie(true);
             } else {
                 ClipHandler.play (ClipHandler.O);
                 merlinGame.leds[found].setState (LEDSTATE.ON);
             }
             if (checkWin (LEDSTATE.ON) == true) {
-                lose();
+                lose(true);
             }
         } else {
             int v = id.getNumVal();
@@ -102,7 +104,7 @@ public class TicTacToe extends Subgame {
                     merlinGame.leds[v].setState(LEDSTATE.BLINK);
                     ClipHandler.play(ClipHandler.X);
                     if (checkWin(LEDSTATE.BLINK) == true) {
-                        win();
+                        win(true);
                     }
                 } else {
                     ClipHandler.play(ClipHandler.BUZZ);
