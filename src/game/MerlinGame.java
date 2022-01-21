@@ -87,6 +87,9 @@ public class MerlinGame extends JPanel {
                 case KEY5:
                     beginGame (new MagicSquare (this), id);
                     break;
+                case KEY6:
+                    beginGame (new MindBender (this), id);
+                    break;
                 default:
                     ClipHandler.play (ClipHandler.LOSE);
                     break;
