@@ -22,10 +22,7 @@ public class MerlinGame extends JPanel {
     private BufferedImage imgLedOff;
     private BufferedImage offImage;
     private Graphics offGraphics;
-    private MagicSquare magicSquare = new MagicSquare(this);
-    private TicTacToe ticTacToe = new TicTacToe(this);
-    private MusicMachine musicMachine = new MusicMachine (this);
-    private Echo echo = new Echo (this);
+    private Subgame subGame;
 
     public MerlinGame() throws Exception {
         super();
@@ -45,6 +42,8 @@ public class MerlinGame extends JPanel {
         leds[10] = new Led(140, 452);
         // start state
         leds[0].setState(LEDSTATE.BLINK);
+
+        ClipHandler.playWait (ClipHandler.INIT);
 
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -73,17 +72,20 @@ public class MerlinGame extends JPanel {
         }
         if (lastClick == NEWGAME) {
             switch (id) {
-                case KEY5:
-                    beginGame (magicSquare, id);
-                    break;
                 case KEY1:
-                    beginGame (ticTacToe, id);
+                    beginGame (new TicTacToe (this), id);
                     break;
                 case KEY2:
-                    beginGame (musicMachine, id);
+                    beginGame (new MusicMachine (this), id);
                     break;
                 case KEY3:
-                    beginGame (echo, id);
+                    beginGame (new Echo (this), id);
+                    break;
+                case KEY4:
+                    beginGame (new BlackJack (this), id);
+                    break;
+                case KEY5:
+                    beginGame (new MagicSquare (this), id);
                     break;
                 default:
                     ClipHandler.play (ClipHandler.LOSE);
@@ -91,18 +93,19 @@ public class MerlinGame extends JPanel {
             }
             return;
         }
-        if (currentGame == KEY5)
-            magicSquare.clicked(id);
-        else if (currentGame == KEY2)
-            musicMachine.clicked(id);
-        else if (currentGame == KEY1)
-            ticTacToe.clicked(id);
-        else if (currentGame == KEY3)
-            echo.clicked(id);
+        if (subGame != null) {
+            if (id == COMPTURN)
+                subGame.compTurn ();
+            else if (id == HITME)
+                subGame.hitMe ();
+            else
+                subGame.clicked (id);
+        }
         lastClick = id;
     }
 
     private void beginGame(Subgame sub, KEY id) {
+        subGame = sub;
         leds[0].setState(LEDSTATE.OFF);
         ClipHandler.play(ClipHandler.BEGIN);
         currentGame = id;

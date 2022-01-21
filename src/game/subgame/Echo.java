@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Echo extends Subgame {
-    private int errors = 0;
     private final ArrayList<Integer> seq = new ArrayList<> ();
     private final ArrayList<Integer> input = new ArrayList<> ();
+    private int errors = 0;
+
     public Echo (MerlinGame mg) {
         super (mg);
     }
@@ -24,37 +25,25 @@ public class Echo extends Subgame {
 
     @Override
     public void clicked (KEY id) {
-        if (id == KEY.COMPTURN) {
-            if (!seq.isEmpty ()) {
-                for (int t : seq) { // play sequence
-                    merlinGame.leds[t].setState (LEDSTATE.ON);
-                    ClipHandler.playWait (t);
-                    //Utils.delay ();
-                    merlinGame.leds[t].setState (LEDSTATE.OFF);
-                }
-            }
-            return;
-        }
         int v = id.getNumVal ();
         if (v >= 0 && v <= 9) {
             if (seq.isEmpty ()) { // generate sequence
-                Random rnd = new Random();
                 int before = -1;
                 int z;
-                for (int s=0; s<v; s++) {
+                for (int s = 0; s < v; s++) {
                     do
-                        z = rnd.nextInt (9)+1;
+                        z = Utils.random (1, 9); 
                     while (z == before);
                     seq.add (z);
                     before = z;
                 }
                 merlinGame.leds[0].setState (LEDSTATE.OFF);
-                ClipHandler.play(ClipHandler.X);
+                ClipHandler.play (ClipHandler.X);
             } else { // user plays
-                if (v != seq.get(input.size ())) {
+                if (v != seq.get (input.size ())) {
                     ClipHandler.play (ClipHandler.BUZZ);
                     errors++;
-                    if (errors == seq.size()) {
+                    if (errors == 2) {
                         input.clear ();
                         errors = 0;
                         lose (false);
@@ -64,10 +53,11 @@ public class Echo extends Subgame {
                 merlinGame.leds[v].setState (LEDSTATE.ON);
                 ClipHandler.playWait (v);
                 merlinGame.leds[v].setState (LEDSTATE.OFF);
-                input.add(v);
-                if (input.size () == seq.size()) {
+                input.add (v);
+                errors = 0;
+                if (input.size () == seq.size ()) {
                     if (input.toString ().equals (seq.toString ())) {
-                        win(false);
+                        win (false);
                     } else {
                         lose (false);
                     }
@@ -75,5 +65,22 @@ public class Echo extends Subgame {
                 }
             }
         }
+    }
+
+    @Override
+    public void compTurn () {
+        if (!seq.isEmpty ()) {
+            for (int t : seq) { // play sequence
+                merlinGame.leds[t].setState (LEDSTATE.ON);
+                ClipHandler.playWait (t);
+                //Utils.delay ();
+                merlinGame.leds[t].setState (LEDSTATE.OFF);
+            }
+        }
+    }
+
+    @Override
+    public void hitMe () {
+
     }
 }

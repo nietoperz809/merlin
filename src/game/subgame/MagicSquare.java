@@ -21,6 +21,16 @@ public class MagicSquare extends Subgame {
         }
     }
 
+    @Override
+    public void compTurn () {
+
+    }
+
+    @Override
+    public void hitMe () {
+
+    }
+
     private boolean isMSquare() {
         for (int s = 1; s < 10; s++) {
             if (s == 5)

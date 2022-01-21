@@ -26,14 +26,25 @@ public class MusicMachine extends Subgame {
         if (v >= 0 && v <= 9) {
             list.add (id);
             ClipHandler.play(v);
-        } else if (id == KEY.COMPTURN) {
-            for (KEY k : list) {
-                if (k == KEY0)
-                    Utils.delay (100);
-                else
-                    ClipHandler.play (k.getNumVal ());
+        }
+    }
+
+    @Override
+    public void compTurn () {
+        for (KEY k : list) {
+            if (k == KEY0)
+                Utils.delay (300);
+            else {
+                merlinGame.leds[k.getNumVal ()].setState (LEDSTATE.ON);
+                ClipHandler.play (k.getNumVal ());
                 Utils.delay (200);
+                merlinGame.leds[k.getNumVal ()].setState (LEDSTATE.OFF);
             }
         }
+    }
+
+    @Override
+    public void hitMe () {
+
     }
 }

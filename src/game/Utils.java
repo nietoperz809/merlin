@@ -2,9 +2,16 @@ package game;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
+import java.util.Random;
 
 public class Utils
 {
+    private static Random rnd = new Random ();
+
+    public static int random (int min, int max) {
+        return rnd.nextInt(max - min + 1) + min;
+    }
+
     public static void delay(int ms)
     {
         try {

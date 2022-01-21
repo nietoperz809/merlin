@@ -1,24 +1,27 @@
 package game.subgame;
 
-import game.*;
+import game.ClipHandler;
+import game.KEY;
+import game.LEDSTATE;
+import game.MerlinGame;
 
 public class TicTacToe extends Subgame {
 
     static private int winPos[][] = {
             {1, 2, 3}, {4, 5, 6}, {7, 8, 9},
             {1, 4, 7}, {2, 5, 8}, {3, 6, 9},
-            {1,5,9}, {3,5,7}
+            {1, 5, 9}, {3, 5, 7}
     };
 
     public TicTacToe (MerlinGame ml) {
-        super(ml);
+        super (ml);
     }
 
-    private boolean checkWin(LEDSTATE ls) {
+    private boolean checkWin (LEDSTATE ls) {
         for (int[] a : winPos) {
             int cnt = 0;
             for (int b : a) {
-                if (merlinGame.leds[b].getState() == ls) {
+                if (merlinGame.leds[b].getState () == ls) {
                     cnt++;
                     if (cnt == 3)
                         return true;
@@ -42,11 +45,11 @@ public class TicTacToe extends Subgame {
                     merlinGame.leds[a[2]].getState () == ls &&
                     merlinGame.leds[a[0]].getState () == LEDSTATE.OFF)
                 return a[0];
-            }
+        }
         return -1; // not found
     }
 
-    private int getProbablyGoodPos(LEDSTATE ls) {
+    private int getProbablyGoodPos (LEDSTATE ls) {
         for (int[] a : winPos) {
             if (merlinGame.leds[a[0]].getState () == ls &&
                     merlinGame.leds[a[1]].getState () == LEDSTATE.OFF &&
@@ -64,53 +67,57 @@ public class TicTacToe extends Subgame {
         return -1;
     }
 
-    private int getRandomPos()
-    {
-        for (int s=1; s<10; s++)
+    private int getRandomPos () {
+        for (int s = 1; s < 10; s++)
             if (merlinGame.leds[s].getState () == LEDSTATE.OFF)
                 return s;
         return -1;
     }
 
     @Override
-    public void start() {
-        merlinGame.leds[10].setState(LEDSTATE.BLINK);
+    public void start () {
+        merlinGame.leds[10].setState (LEDSTATE.BLINK);
     }
 
     @Override
-    public void clicked(KEY id) {
-        merlinGame.leds[10].setState(LEDSTATE.OFF);
-        if (id == KEY.COMPTURN) {
-            int found = getNewPos (LEDSTATE.ON); // winner pos
-            if (found == -1)
-                found = getNewPos (LEDSTATE.BLINK); // defense pos
-            if (found == -1)
-                found = getProbablyGoodPos (LEDSTATE.ON); // build oxo pos
-            if (found == -1)
-                found = getRandomPos ();
-            if (found == -1) {
-                tie(true);
-            } else {
-                ClipHandler.play (ClipHandler.O);
-                merlinGame.leds[found].setState (LEDSTATE.ON);
-            }
-            if (checkWin (LEDSTATE.ON) == true) {
-                lose(true);
-            }
-        } else {
-            int v = id.getNumVal();
-            if (v >= 1 && v <= 9) {
-                if (merlinGame.leds[v].getState() == LEDSTATE.OFF) {
-                    merlinGame.leds[v].setState(LEDSTATE.BLINK);
-                    ClipHandler.play(ClipHandler.X);
-                    if (checkWin(LEDSTATE.BLINK) == true) {
-                        win(true);
-                    }
-                } else {
-                    ClipHandler.play(ClipHandler.BUZZ);
+    public void clicked (KEY id) {
+        merlinGame.leds[10].setState (LEDSTATE.OFF);
+        int v = id.getNumVal ();
+        if (v >= 1 && v <= 9) {
+            if (merlinGame.leds[v].getState () == LEDSTATE.OFF) {
+                merlinGame.leds[v].setState (LEDSTATE.BLINK);
+                ClipHandler.play (ClipHandler.X);
+                if (checkWin (LEDSTATE.BLINK) == true) {
+                    win (true);
                 }
+            } else {
+                ClipHandler.play (ClipHandler.BUZZ);
             }
         }
-        //System.out.println (id);
+    }
+
+    @Override
+    public void compTurn () {
+        int found = getNewPos (LEDSTATE.ON); // winner pos
+        if (found == -1)
+            found = getNewPos (LEDSTATE.BLINK); // defense pos
+        if (found == -1)
+            found = getProbablyGoodPos (LEDSTATE.ON); // build oxo pos
+        if (found == -1)
+            found = getRandomPos ();
+        if (found == -1) {
+            tie (true);
+        } else {
+            ClipHandler.play (ClipHandler.O);
+            merlinGame.leds[found].setState (LEDSTATE.ON);
+        }
+        if (checkWin (LEDSTATE.ON) == true) {
+            lose (true);
+        }
+    }
+
+    @Override
+    public void hitMe () {
+        
     }
 }

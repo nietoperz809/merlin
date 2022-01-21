@@ -12,6 +12,8 @@ public abstract class Subgame {
     }
     public abstract void start ();
     public abstract void clicked (KEY id);
+    public abstract void compTurn();
+    public abstract void hitMe();
 
     private void reset()
     {
