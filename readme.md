@@ -8,7 +8,7 @@ To start a game click "New Game" and then 1 to 6.
 
 The original user guide can be found here: https://archive.org/stream/manuals-handheld-games-ParkerBros-Merlin/ParkerBros-Merlin_djvu.txt
 
-Right click in the Merlin window also shows the user guide.
+A right click in the Merlin window also shows the user guide.
 
 <p align="center">
 <img src="screenshot.jpg">

@@ -5,6 +5,8 @@ import game.subgame.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.util.Objects;
 import java.util.Timer;
@@ -18,6 +20,8 @@ public class MerlinGame extends JPanel {
     public KEY lastGame = NOKEY;
     public KEY currentGame = NOKEY;
     private BufferedImage imgMain;
+    private BufferedImage imgNumbered;
+    private BufferedImage saveImg;
     private BufferedImage imgLedOn;
     private BufferedImage imgLedOff;
     private BufferedImage offImage;
@@ -119,6 +123,7 @@ public class MerlinGame extends JPanel {
 
     private void prepareGraphic() throws Exception {
         imgMain = ImageIO.read(Objects.requireNonNull(Utils.getResource("face.png")));
+        imgNumbered = ImageIO.read(Objects.requireNonNull(Utils.getResource("facenum.png")));
         imgLedOn = ImageIO.read(Objects.requireNonNull(Utils.getResource("led_on.png")));
         imgLedOff = ImageIO.read(Objects.requireNonNull(Utils.getResource("led_off.png")));
         offImage = GraphicsEnvironment.
@@ -128,9 +133,10 @@ public class MerlinGame extends JPanel {
                 createCompatibleImage(imgMain.getWidth(), imgMain.getHeight(), Transparency.OPAQUE);
         offGraphics = offImage.createGraphics();
         offGraphics.drawImage(imgMain, 0, 0, null);
+        saveImg = null;
     }
 
-    private void allLedsOff() {
+    public void allLedsOff() {
         for (int s = 0; s < 11; s++)
             leds[s].setState(LEDSTATE.OFF);
     }
@@ -152,5 +158,15 @@ public class MerlinGame extends JPanel {
 
     @Override
     public void update(Graphics g) {
+    }
+
+    public synchronized void showNumbering () {
+        if (saveImg == null) {
+            saveImg = offImage;
+            offImage = imgNumbered;
+        } else {
+            offImage = saveImg;
+            saveImg = null;
+        }
     }
 }
