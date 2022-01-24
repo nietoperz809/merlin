@@ -42,7 +42,7 @@ public class MindBender extends Subgame {
             }
             merlinGame.leds[0].setState (LEDSTATE.OFF);
             ClipHandler.play (ClipHandler.X);
-            System.out.println (num);
+            //System.out.println (num);
         } else {
             guess.add (v);
             ClipHandler.play (v);

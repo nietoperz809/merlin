@@ -15,12 +15,12 @@ public class MainForm extends JFrame{
         mainPanel.add (game, BorderLayout.CENTER);
 
         JMenuBar mb = new JMenuBar ();
-        JMenuItem m1 = new JMenuItem(new AbstractAction("Num") {
+        JMenuItem m1 = new JMenuItem(new AbstractAction("№") {
             public void actionPerformed(ActionEvent e) {
                 game.showNumbering();
             }
         });
-        JMenuItem m2 = new JMenuItem(new AbstractAction("Instr") {
+        JMenuItem m2 = new JMenuItem(new AbstractAction("ℑ") {
             public void actionPerformed(ActionEvent e) {
                 dialog.Manual.main (game);
             }
