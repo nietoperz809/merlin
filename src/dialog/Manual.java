@@ -1,6 +1,5 @@
 package dialog;
 
-import game.MerlinGame;
 import game.Utils;
 
 import javax.swing.*;
@@ -10,20 +9,26 @@ import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import javax.swing.text.html.HTML;
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.stream.Collectors;
+import java.util.HashMap;
 
 public class Manual extends JFrame {
     private JPanel contentPane;
     private JButton dismissButton;
     private JTextPane textPane1;
+    private HashMap<String, String> linkMap = new HashMap<> ();
 
     public Manual () {
         setContentPane (contentPane);
         getRootPane ().setDefaultButton (dismissButton);
         dismissButton.addActionListener (e -> dispose ());
+
+        linkMap.put ("TTT", "TicTacToe.html");
+        linkMap.put ("BACK", "main.html");
+        linkMap.put ("ECH", "Echo.html");
+        linkMap.put ("BLA", "BlackJack13.html");
+        linkMap.put ("MAG", "MagicSquare.html");
+        linkMap.put ("MIN", "MindBender.html");
+        linkMap.put ("MUS", "MusicMachine.html");
     }
 
     public static void main () {
@@ -42,36 +47,7 @@ public class Manual extends JFrame {
                 Object attribute = e.getSourceElement ().getAttributes ().getAttribute (HTML.Tag.A);
                 String dst = attribute.toString ();
                 dst = dst.substring (6, dst.length () - 1);
-                switch (dst) {
-                    case "TTT":
-                        dialog.loadPage ("TicTacToe.html");
-                        break;
-
-                    case "BACK":
-                        dialog.loadPage ("main.html");
-                        break;
-
-                    case "ECH":
-                        dialog.loadPage ("Echo.html");
-                        break;
-
-                    case "BLA":
-                        dialog.loadPage ("BlackJack13.html");
-                        break;
-
-                    case "MAG":
-                        dialog.loadPage ("MagicSquare.html");
-                        break;
-
-                    case "MIN":
-                        dialog.loadPage ("MindBender.html");
-                        break;
-
-                    case "MUS":
-                        dialog.loadPage ("MusicMachine.html");
-                        break;
-                }
-                //System.out.println (dst);
+                dialog.loadPage (dialog.linkMap.get (dst));
             }
         });
 
@@ -82,10 +58,7 @@ public class Manual extends JFrame {
     }
 
     private void loadPage (String name) {
-        InputStream is = Utils.getResource (name);
-        String page = new BufferedReader (new InputStreamReader (is))
-                .lines ().collect (Collectors.joining ("\n"));
-        textPane1.setText (page);
+        textPane1.setText (Utils.getResourceText (name));
         textPane1.setCaretPosition (0);
     }
 

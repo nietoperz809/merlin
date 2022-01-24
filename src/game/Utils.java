@@ -1,8 +1,11 @@
 package game;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class Utils
 {
@@ -19,6 +22,12 @@ public class Utils
         } catch (InterruptedException e) {
             System.err.println(e);
         }
+    }
+
+    public static String getResourceText (String name) {
+        InputStream is = Utils.getResource (name);
+        return new BufferedReader (new InputStreamReader (is))
+                .lines ().collect (Collectors.joining ("\n"));
     }
 
     public static InputStream getResource (String name)
