@@ -15,19 +15,18 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.stream.Collectors;
 
-public class Manual extends JDialog {
+public class Manual extends JFrame {
     private JPanel contentPane;
     private JButton dismissButton;
     private JTextPane textPane1;
 
     public Manual () {
         setContentPane (contentPane);
-        setModal (false);
         getRootPane ().setDefaultButton (dismissButton);
         dismissButton.addActionListener (e -> dispose ());
     }
 
-    public static void main (MerlinGame mg) {
+    public static void main () {
         Manual dialog = new Manual ();
 
         StyledDocument doc = dialog.textPane1.getStyledDocument ();
@@ -76,9 +75,10 @@ public class Manual extends JDialog {
             }
         });
 
-        dialog.setLocationRelativeTo (null);
         dialog.pack ();
         dialog.setVisible (true);
+        dialog.setResizable (false);
+        dialog.setLocationRelativeTo (null);
     }
 
     private void loadPage (String name) {
