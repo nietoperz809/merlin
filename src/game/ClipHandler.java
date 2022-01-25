@@ -1,14 +1,62 @@
 package game;
 
+import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.*;
+import javax.sound.sampled.LineEvent;
+import java.util.concurrent.CountDownLatch;
 
-import static game.Utils.delay;
+class MyClip {
+    private Clip cl;
+    private AudioInputStream ais;
+    private String _name;
+
+    public MyClip () {
+
+    }
+
+    public void init (String name) {
+        _name = name;
+    }
+
+    private void _init (String name) throws Exception {
+        cl = AudioSystem.getClip ();
+        ais = AudioSystem.getAudioInputStream (Utils.getResource (_name));
+    }
+
+    public void play () {
+        try {
+            _init (_name);
+            cl.open (ais);
+            cl.stop ();
+            cl.setMicrosecondPosition (0);
+            cl.start ();
+        } catch (Exception e) {
+            System.err.println (e.getMessage ());
+        }
+    }
+
+    public void playSync () {
+        CountDownLatch syncLatch = new CountDownLatch (1);
+        try {
+            _init (_name);
+            //cl = AudioSystem.getClip ();
+            cl.open (ais);
+            cl.addLineListener (e -> {
+                if (e.getType () == LineEvent.Type.STOP) {
+                    syncLatch.countDown ();
+                }
+            });
+            cl.start ();
+            syncLatch.await ();
+            //cl.close ();
+        } catch (Exception e) {
+            e.printStackTrace ();
+        }
+    }
+}
 
 public class ClipHandler {
-    private static final Clip[] clips = new Clip[20];   // 4 = fail sound
-
     public static final int MON = 11;
     public static final int BEGIN = 12;
     public static final int WIN = 13;
@@ -18,43 +66,32 @@ public class ClipHandler {
     public static final int X = 17;
     public static final int O = 18;
     public static final int TIE = 19;
+    private static final MyClip[] clips = new MyClip[20];   // 4 = fail sound
 
     static {
-        try {
-            for (int s = 0; s < clips.length; s++)
-                clips[s] = AudioSystem.getClip();
-            for (int s = 0; s < 11; s++) {
-                String name = "m" + s + ".wav";
-                clips[s].open(AudioSystem.getAudioInputStream(Utils.getResource(name)));
-            }
-            clips[WIN].open(AudioSystem.getAudioInputStream(Utils.getResource("mWin.wav")));
-            clips[MON].open(AudioSystem.getAudioInputStream(Utils.getResource("mOn.wav")));
-            clips[BUZZ].open(AudioSystem.getAudioInputStream(Utils.getResource("mBuzz.wav")));
-            clips[INIT].open(AudioSystem.getAudioInputStream(Utils.getResource("init.wav")));
-            clips[BEGIN].open(AudioSystem.getAudioInputStream(Utils.getResource("mBegin.wav")));
-            clips[LOSE].open(AudioSystem.getAudioInputStream(Utils.getResource("mLose.wav")));
-            clips[X].open(AudioSystem.getAudioInputStream(Utils.getResource("mX.wav")));
-            clips[O].open(AudioSystem.getAudioInputStream(Utils.getResource("mO.wav")));
-            clips[TIE].open(AudioSystem.getAudioInputStream(Utils.getResource("mTie.wav")));
-        } catch (Exception e) {
-            System.out.println(e);
+        for (int s = 0; s < clips.length; s++) {
+            clips[s] = new MyClip ();
         }
+        for (int s = 0; s < 11; s++) {
+            String name = "m" + s + ".wav";
+            clips[s].init (name);
+        }
+        clips[WIN].init ("mWin.wav");
+        clips[MON].init ("mOn.wav");
+        clips[BUZZ].init ("mBuzz.wav");
+        clips[INIT].init ("init.wav");
+        clips[BEGIN].init ("mBegin.wav");
+        clips[LOSE].init ("mLose.wav");
+        clips[X].init ("mX.wav");
+        clips[O].init ("mO.wav");
+        clips[TIE].init ("mTie.wav");
     }
 
     public static void playWait (int num) {
-        play (num);
-        while(clips[num].getMicrosecondLength() != clips[num].getMicrosecondPosition())
-        {
-        }
+        clips[num].playSync ();
     }
 
-    public static void play(int num) {
-        try {
-            clips[num].stop();
-            clips[num].setMicrosecondPosition(0);
-            clips[num].start();
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+    public static void play (int num) {
+        clips[num].play ();
     }
 }
