@@ -24,7 +24,7 @@ public class MerlinGame extends JPanel {
     private BufferedImage imgLedOff;
     private BufferedImage offImage;
     private Graphics offGraphics;
-    public static Subgame subGame;
+    public Subgame subGame;
 
     public MerlinGame() throws Exception {
         super();
@@ -109,10 +109,10 @@ public class MerlinGame extends JPanel {
         lastClick = id;
     }
 
-    private void beginGame(Subgame sub, KEY id) {
+    public void beginGame(Subgame sub, KEY id) {
         subGame = sub;
         leds[0].setState(LEDSTATE.OFF);
-        ClipHandler.play(ClipHandler.BEGIN);
+        ClipHandler.playWait (ClipHandler.BEGIN);
         currentGame = id;
         lastGame = id;
         lastClick = NOKEY;

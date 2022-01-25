@@ -22,7 +22,7 @@ public class MainForm extends JFrame{
         });
         JMenuItem m2 = new JMenuItem(new AbstractAction("ℑ") {
             public void actionPerformed(ActionEvent e) {
-                dialog.Manual.main();
+                dialog.Manual.main(game);
             }
         });
         mb.add (m1);

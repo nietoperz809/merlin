@@ -11,6 +11,8 @@ import javax.swing.text.*;
 import java.awt.*;
 import java.util.HashMap;
 
+import static game.KEY.KEY2;
+
 public class Manual extends JFrame {
     private JPanel contentPane;
     private JButton dismissButton;
@@ -31,7 +33,7 @@ public class Manual extends JFrame {
         linkMap.put ("MUS", "MusicMachine.html");
     }
 
-    public static void main () {
+    public static void main (MerlinGame mg) {
         Manual dialog = new Manual ();
         StyledDocument doc = dialog.textPane1.getStyledDocument ();
         SimpleAttributeSet center = new SimpleAttributeSet ();
@@ -45,21 +47,7 @@ public class Manual extends JFrame {
             if (e.getEventType () == HyperlinkEvent.EventType.ACTIVATED) {
                 String dst = e.getDescription ().substring (1);
                 if (dst.equals ("SONG")) {
-                    Element ele = e.getSourceElement ();
-                    int st = ele.getStartOffset ();
-                    int en = ele.getEndOffset ();
-                    try {
-                        String txt = ele.getDocument ().getText (st, en - st);
-                        int[] song = PredefSongs.getSong (txt);
-                        //System.out.println (song);
-                        if (MerlinGame.subGame instanceof MusicMachine) {
-                            MusicMachine ms = ((MusicMachine) MerlinGame.subGame);
-                            ms.loadSong (song);                             
-                            ms.compTurn ();
-                        }
-                    } catch (BadLocationException ex) {
-                        ex.printStackTrace ();
-                    }
+                    dialog.playSongFromHtml (e, mg);
                 } else {
                     dialog.loadPage (dialog.linkMap.get (dst));
                 }
@@ -67,9 +55,27 @@ public class Manual extends JFrame {
         });
 
         dialog.pack ();
-        dialog.setVisible (true);
         dialog.setResizable (false);
         dialog.setLocationRelativeTo (null);
+        dialog.setVisible (true);
+    }
+
+    private void playSongFromHtml (HyperlinkEvent e, MerlinGame mg) {
+        Element ele = e.getSourceElement ();
+        int st = ele.getStartOffset ();
+        int en = ele.getEndOffset ();
+        try {
+            String txt = ele.getDocument ().getText (st, en - st);
+            int[] song = PredefSongs.getSong (txt);
+            if (mg.subGame instanceof MusicMachine == false) {
+                mg.beginGame (new MusicMachine (mg), KEY2);
+            }
+            MusicMachine ms = ((MusicMachine) mg.subGame);
+            ms.loadSong (song);
+            ms.compTurn ();
+        } catch (BadLocationException ex) {
+            ex.printStackTrace ();
+        }
     }
 
     private void loadPage (String name) {
