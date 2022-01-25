@@ -6,7 +6,7 @@ public enum KEY {
     KEY6(6), KEY7(7), KEY8(8), KEY9(9), KEY10(10),
     NEWGAME(11), SAMEGAME(12), HITME(13), COMPTURN(14);
 
-    private int numVal;
+    private final int numVal;
 
     KEY(int numVal) {
         this.numVal = numVal;
@@ -14,5 +14,9 @@ public enum KEY {
 
     public int getNumVal() {
         return numVal;
+    }
+
+    public static KEY get (int n) {
+        return KEY.valueOf ("KEY"+n);
     }
 }

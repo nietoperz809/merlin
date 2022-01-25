@@ -35,7 +35,8 @@ public class BlackJack extends Subgame{
             lose (true);
         else if (compPoints == userPoints)
             tie (true);
-        win (true);
+        else
+            win (true);
     }
 
     @Override
@@ -43,8 +44,9 @@ public class BlackJack extends Subgame{
         int x = setFreeLed (LEDSTATE.BLINK);
         ClipHandler.play (0);
         userPoints += x;
-        if (userPoints > 13)
-            lose(true);
+        if (userPoints > 13) {
+            lose (true);
+        }
     }
 
     private int setFreeLed (LEDSTATE ls) {

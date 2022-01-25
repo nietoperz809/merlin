@@ -8,10 +8,16 @@ import static game.KEY.KEY0;
 
 public class MusicMachine extends Subgame {
 
-    private ArrayList<KEY> list = new ArrayList<> ();
+    private final ArrayList<KEY> list = new ArrayList<> ();
 
     public MusicMachine (MerlinGame mg) {
         super(mg);
+    }
+
+    public void loadSong (int[] vals) {
+        list.clear ();
+        for (int n : vals)
+            list.add (KEY.get (n));
     }
 
     @Override
@@ -32,12 +38,14 @@ public class MusicMachine extends Subgame {
     @Override
     public void compTurn () {
         for (KEY k : list) {
-            if (k == KEY0)
-                Utils.delay (300);
+            if (k == KEY0) {
+                ClipHandler.playWait (ClipHandler.INIT);
+                //Utils.delay (150);
+            }
             else {
                 merlinGame.leds[k.getNumVal ()].setState (LEDSTATE.ON);
-                ClipHandler.play (k.getNumVal ());
-                Utils.delay (200);
+                ClipHandler.playWait (k.getNumVal ());
+                //Utils.delay (150);
                 merlinGame.leds[k.getNumVal ()].setState (LEDSTATE.OFF);
             }
         }

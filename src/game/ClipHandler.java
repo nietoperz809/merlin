@@ -1,60 +1,9 @@
 package game;
 
-import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineEvent;
 import java.util.concurrent.CountDownLatch;
-
-class MyClip {
-    private Clip cl;
-    private AudioInputStream ais;
-    private String _name;
-
-    public MyClip () {
-
-    }
-
-    public void init (String name) {
-        _name = name;
-    }
-
-    private void _init (String name) throws Exception {
-        cl = AudioSystem.getClip ();
-        ais = AudioSystem.getAudioInputStream (Utils.getResource (_name));
-    }
-
-    public void play () {
-        try {
-            _init (_name);
-            cl.open (ais);
-            cl.stop ();
-            cl.setMicrosecondPosition (0);
-            cl.start ();
-        } catch (Exception e) {
-            System.err.println (e.getMessage ());
-        }
-    }
-
-    public void playSync () {
-        CountDownLatch syncLatch = new CountDownLatch (1);
-        try {
-            _init (_name);
-            //cl = AudioSystem.getClip ();
-            cl.open (ais);
-            cl.addLineListener (e -> {
-                if (e.getType () == LineEvent.Type.STOP) {
-                    syncLatch.countDown ();
-                }
-            });
-            cl.start ();
-            syncLatch.await ();
-            //cl.close ();
-        } catch (Exception e) {
-            e.printStackTrace ();
-        }
-    }
-}
 
 public class ClipHandler {
     public static final int MON = 11;
@@ -74,17 +23,17 @@ public class ClipHandler {
         }
         for (int s = 0; s < 11; s++) {
             String name = "m" + s + ".wav";
-            clips[s].init (name);
+            clips[s].setResourceName (name);
         }
-        clips[WIN].init ("mWin.wav");
-        clips[MON].init ("mOn.wav");
-        clips[BUZZ].init ("mBuzz.wav");
-        clips[INIT].init ("init.wav");
-        clips[BEGIN].init ("mBegin.wav");
-        clips[LOSE].init ("mLose.wav");
-        clips[X].init ("mX.wav");
-        clips[O].init ("mO.wav");
-        clips[TIE].init ("mTie.wav");
+        clips[WIN].setResourceName ("mWin.wav");
+        clips[MON].setResourceName ("mOn.wav");
+        clips[BUZZ].setResourceName ("mBuzz.wav");
+        clips[INIT].setResourceName ("init.wav");
+        clips[BEGIN].setResourceName ("mBegin.wav");
+        clips[LOSE].setResourceName ("mLose.wav");
+        clips[X].setResourceName ("mX.wav");
+        clips[O].setResourceName ("mO.wav");
+        clips[TIE].setResourceName ("mTie.wav");
     }
 
     public static void playWait (int num) {

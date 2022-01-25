@@ -25,18 +25,21 @@ public abstract class Subgame {
     protected void win (boolean reset) {
         if (reset)
             reset();
+        Utils.delay (200);
         ClipHandler.play(ClipHandler.WIN);
     }
 
     protected void tie (boolean reset) {
         if (reset)
             reset();
+        Utils.delay (200);
         ClipHandler.play (ClipHandler.TIE);
     }
 
     protected void lose (boolean reset) {
         if (reset)
             reset();
+        Utils.delay (200);
         ClipHandler.play(ClipHandler.LOSE);
     }
 }

@@ -4,11 +4,9 @@ import game.*;
 
 import java.util.ArrayList;
 
-import static game.KEY.KEY0;
-
 public class MindBender extends Subgame {
-    private ArrayList<Integer> num = new ArrayList<> ();
-    private ArrayList<Integer> guess = new ArrayList<> ();
+    private final ArrayList<Integer> num = new ArrayList<> ();
+    private final ArrayList<Integer> guess = new ArrayList<> ();
     public MindBender (MerlinGame mg) {
         super (mg);
     }

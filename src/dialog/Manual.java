@@ -1,13 +1,13 @@
 package dialog;
 
+import game.MerlinGame;
+import game.PredefSongs;
 import game.Utils;
+import game.subgame.MusicMachine;
 
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
-import javax.swing.text.html.HTML;
+import javax.swing.text.*;
 import java.awt.*;
 import java.util.HashMap;
 
@@ -15,7 +15,7 @@ public class Manual extends JFrame {
     private JPanel contentPane;
     private JButton dismissButton;
     private JTextPane textPane1;
-    private HashMap<String, String> linkMap = new HashMap<> ();
+    private final HashMap<String, String> linkMap = new HashMap<> ();
 
     public Manual () {
         setContentPane (contentPane);
@@ -33,7 +33,6 @@ public class Manual extends JFrame {
 
     public static void main () {
         Manual dialog = new Manual ();
-
         StyledDocument doc = dialog.textPane1.getStyledDocument ();
         SimpleAttributeSet center = new SimpleAttributeSet ();
         StyleConstants.setAlignment (center, StyleConstants.ALIGN_CENTER);
@@ -44,10 +43,26 @@ public class Manual extends JFrame {
 
         dialog.textPane1.addHyperlinkListener (e -> {
             if (e.getEventType () == HyperlinkEvent.EventType.ACTIVATED) {
-                Object attribute = e.getSourceElement ().getAttributes ().getAttribute (HTML.Tag.A);
-                String dst = attribute.toString ();
-                dst = dst.substring (6, dst.length () - 1);
-                dialog.loadPage (dialog.linkMap.get (dst));
+                String dst = e.getDescription ().substring (1);
+                if (dst.equals ("SONG")) {
+                    Element ele = e.getSourceElement ();
+                    int st = ele.getStartOffset ();
+                    int en = ele.getEndOffset ();
+                    try {
+                        String txt = ele.getDocument ().getText (st, en - st);
+                        int[] song = PredefSongs.getSong (txt);
+                        //System.out.println (song);
+                        if (MerlinGame.subGame instanceof MusicMachine) {
+                            MusicMachine ms = ((MusicMachine) MerlinGame.subGame);
+                            ms.loadSong (song);                             
+                            ms.compTurn ();
+                        }
+                    } catch (BadLocationException ex) {
+                        ex.printStackTrace ();
+                    }
+                } else {
+                    dialog.loadPage (dialog.linkMap.get (dst));
+                }
             }
         });
 

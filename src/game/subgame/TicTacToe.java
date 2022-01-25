@@ -7,7 +7,7 @@ import game.MerlinGame;
 
 public class TicTacToe extends Subgame {
 
-    static private int winPos[][] = {
+    static private final int[][] winPos = {
             {1, 2, 3}, {4, 5, 6}, {7, 8, 9},
             {1, 4, 7}, {2, 5, 8}, {3, 6, 9},
             {1, 5, 9}, {3, 5, 7}
@@ -87,7 +87,7 @@ public class TicTacToe extends Subgame {
             if (merlinGame.leds[v].getState () == LEDSTATE.OFF) {
                 merlinGame.leds[v].setState (LEDSTATE.BLINK);
                 ClipHandler.play (ClipHandler.X);
-                if (checkWin (LEDSTATE.BLINK) == true) {
+                if (checkWin (LEDSTATE.BLINK)) {
                     win (true);
                 }
             } else {
@@ -111,7 +111,7 @@ public class TicTacToe extends Subgame {
             ClipHandler.play (ClipHandler.O);
             merlinGame.leds[found].setState (LEDSTATE.ON);
         }
-        if (checkWin (LEDSTATE.ON) == true) {
+        if (checkWin (LEDSTATE.ON)) {
             lose (true);
         }
     }
