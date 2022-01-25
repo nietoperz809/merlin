@@ -170,5 +170,7 @@ public class MerlinGame extends JPanel {
             offImage = saveImg;
             saveImg = null;
         }
+        offGraphics = offImage.getGraphics ();
+        Led.setStatics(offGraphics, imgLedOn, imgLedOff);
     }
 }

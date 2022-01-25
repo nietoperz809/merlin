@@ -44,6 +44,11 @@ public class PredefSongs {
                 7,6,0, 0,0,0, 2,7,0, 4,6,5, 3,2,0, 3,2,0,
                 2,3,0, 3,4,3, 2,5
         });
+        map.put ("JINGLE BELLS", new int[]{
+                4,4,4, 0,4,4, 4,0,4, 6,2,3, 4,0,0, 0,5,5,
+                5,5,5, 4,4,4, 6,6,5, 3,2
+        });
+
     }
 
     public static int[] getSong (String s) {
