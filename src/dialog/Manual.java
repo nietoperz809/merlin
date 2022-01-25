@@ -67,10 +67,10 @@ public class Manual extends JFrame {
         try {
             String txt = ele.getDocument ().getText (st, en - st);
             int[] song = PredefSongs.getSong (txt);
-            if (mg.subGame instanceof MusicMachine == false) {
+            if (mg.getSubGame () instanceof MusicMachine == false) {
                 mg.beginGame (new MusicMachine (mg), KEY2);
             }
-            MusicMachine ms = ((MusicMachine) mg.subGame);
+            MusicMachine ms = ((MusicMachine) mg.getSubGame ());
             ms.loadSong (song);
             ms.compTurn ();
         } catch (BadLocationException ex) {

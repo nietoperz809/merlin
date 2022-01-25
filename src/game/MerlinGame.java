@@ -24,7 +24,7 @@ public class MerlinGame extends JPanel {
     private BufferedImage imgLedOff;
     private BufferedImage offImage;
     private Graphics offGraphics;
-    public Subgame subGame;
+    private Subgame subGame;
 
     public MerlinGame() throws Exception {
         super();
@@ -57,6 +57,10 @@ public class MerlinGame extends JPanel {
         }, 10, 100);
 
         new ClickDecoder(this);
+    }
+
+    public Subgame getSubGame() {
+        return subGame;
     }
 
     public void buttonClicked(KEY id) {
